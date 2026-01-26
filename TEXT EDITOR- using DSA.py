@@ -3,8 +3,8 @@ class Node:
         self.data = data
         self.next = None
 
- # Inserting a word at beginning
-
+class singly_LL:
+    # Inserting a word at beginning
     def insert_at_beg(self,word):
         temp = Node(word)
         temp.next= self.head
@@ -28,6 +28,8 @@ class Node:
             temp = temp.next
 
         temp.next = new_node
+
+    # When we have nothing to undo 
     def undo(self):
         if self.head is None:
             print("Nothing to undo")
@@ -55,12 +57,12 @@ class Node:
 
         print(" ".join(text))
 
-editor = TextEditor()
+editor = singly_LL()
 
-editor.insertAtEnd("I am ")
-editor.insertAtEnd("Ealisha")
-editor.insertAtEnd("Narware")
-editor.InsertAtBeg("Hello")
+editor.insert_at_end("I am ")
+editor.insert_at_end("Ealisha")
+editor.insert_at_end("Narware")
+editor.insert_at_beg("Hello")
 editor.display()
 # Output: Hello I am  Ealisha Narware
 
