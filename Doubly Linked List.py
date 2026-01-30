@@ -72,7 +72,7 @@ class doubly_LL:
                 t = t.next 
 
         # for deleting last node
-        
+
         if (t.data == value):
             t.prev.next = None
 
